@@ -1,5 +1,7 @@
 # 🕵️‍♂️ Sistema de Detecção de Fraudes com Machine Learning
 
+Inspiração: [Data Science with Onur](https://www.youtube.com/watch?v=4Od5_z28iIE&list=PLTsu3dft3CWg69zbIVUQtFSRx_UV80OOg)
+
 ## 📌 Objetivos do Projeto
 
 - Análise Exploratória de dados de transações bancárias
