@@ -1,17 +1,12 @@
 # 🕵️‍♂️ Sistema de Detecção de Fraudes com Machine Learning
 
-Este projeto tem como objetivo o desenvolvimento de um **sistema completo de Machine Learning para detecção de fraudes**, cobrindo todas as etapas do ciclo de vida de um modelo: desde o **pré-processamento e análise dos dados**, passando pelo **treinamento e avaliação do modelo**, até a **disponibilização de um aplicativo web interativo, criado com Streamlit,** para predição de novos casos.
-
-
-
 ## 📌 Objetivos do Projeto
 
-- Realizar **pré-processamento e limpeza de dados**
-- Analisar variáveis e identificar padrões associados a fraudes
-- Treinar e comparar modelos de Machine Learning
-- Avaliar o desempenho dos modelos com métricas adequadas
-- Criar um **aplicativo web** para predição de novos casos de fraude
-- Disponibilizar uma solução prática e interativa para uso do modelo treinado
+- Análise Exploratória de dados de transações bancárias
+- Pré-processamento de dados
+- Criar Pipeline de pre-processamento e treinamento de modelo de machine learning
+- Exportar modelo treinado (pickle)
+- Criar web app com Streamlit que execute o modelo treinado para realizar predições
 
 
 
@@ -19,37 +14,23 @@ Este projeto tem como objetivo o desenvolvimento de um **sistema completo de Mac
 
 ### 1. Pré-processamento de Dados
 - Tratamento de valores ausentes
-- Codificação de variáveis categóricas
+- One-hot-encoding para variáveis categóricas
 - Normalização / padronização de variáveis numéricas
-- Balanceamento de classes (ex: SMOTE, undersampling)
 - Separação em conjuntos de treino, validação e teste
 
 
-
 ### 2. Análise Exploratória de Dados (EDA)
-- Análise estatística das variáveis
-- Visualização de distribuições e correlações
-- Identificação de variáveis mais relevantes para fraude
-- Detecção de outliers e padrões anômalos
-
-
+- Distribuição de Fraude x Não-Fraude
+- Distribuição por tipo de transação
+- Taxa de fraude por tipo de transação
+- Analise de quantidade transferida
 
 ### 3. Treinamento do Modelo
-- Teste de diferentes algoritmos (ex: Logistic Regression, Random Forest, XGBoost, etc.)
-- Ajuste de hiperparâmetros
-- Validação cruzada
-- Seleção do melhor modelo
+- Treinamento básico apenas para criar o Pipeline
 
 
 ### 4. Avaliação do Modelo
-- Métricas utilizadas:
-  - Accuracy
-  - Precision
-  - Recall
-  - F1-Score
-  - ROC-AUC
-- Análise da matriz de confusão
-- Avaliação de trade-offs entre falsos positivos e falsos negativos
+- Breve avaliação do modelo
 
 
 
@@ -78,27 +59,16 @@ Este projeto tem como objetivo o desenvolvimento de um **sistema completo de Mac
 
 ```text
 ├── data/
-│   ├── raw/                # Dados brutos
-│   ├── processed/          # Dados tratados
+│   ├── data.csv
 │
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_model_training.ipynb
-│   ├── 04_model_evaluation.ipynb
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── features.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── predict.py
+│   ├── analise.ipynb
 │
 ├── app/
-│   └── app.py              # Aplicação Streamlit
+│   └── fraud_detection.py              # Aplicação Streamlit
 │
 ├── models/
-│   └── model.pkl           # Modelo treinado
+│   └── fraud_detection_pipeline.pkl           # Pipeline de pre-processamento e treinamento do modelo
 │
 ├── requirements.txt
 ├── README.md
