@@ -43,7 +43,7 @@ Inspiração: [Data Science with Onur](https://www.youtube.com/watch?v=4Od5_z28i
 - Exibição da probabilidade de fraude
 - Interface simples e intuitiva
 
-
+![Fraud App Image](images/fraud_app.png){width=600 height=800}
 
 ## 🖥️ Tecnologias Utilizadas
 
